@@ -7,3 +7,7 @@ I went for a very minimalistic look using blue and white colors that represents 
 
 # Technologies
 As advised during my last interview, I made the app using pure JS. For styling, I also just used CSS but used bootstrap for its grid functionality.
+
+# Running the app
+Click on https://hassambazil.github.io/ to check out the app. You could also download the repository and just use index.html page to run the app.
+
