@@ -1,45 +1,23 @@
 <?php
-// recipient email address
-$to = "hassambazil98@gmail.com";
+       // from the form
+       $name = trim(strip_tags($_POST['name']));
+       $email = trim(strip_tags($_POST['email']));
+       $message = htmlentities($_POST['message']);
 
-// subject of the email
-$subject = $_POST['subject'];
+       // set here
+       $subject = "Contact form submitted!";
+       $to = 'hassambazil98@gmail.com';
 
-// message body
-$message = $_POST['message'];
+       $body = <<<HTML
+$message
+HTML;
 
-// from
-$from = $_POST['from'];
+       $headers = "From: $email\r\n";
+       $headers .= "Content-type: text/html\r\n";
 
-// boundary
-$boundary = uniqid();
+       // send the email
+       mail($to, $subject, $body, $headers);
 
-// header information
-$headers = "From: $from\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=\".$boundary.\"\r\n";
-
-// attachment
-$file = $_FILES["attachment"]["tmp_name"];
-$filename = $_FILES["attachment"]["name"];
-$attachment = chunk_split(base64_encode(file_get_contents($file)));
-
-// message with attachment
-$message = "--".$boundary."\r\n";
-$message .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$message .= "Content-Transfer-Encoding: base64\r\n\r\n";
-$message .= chunk_split(base64_encode($message));
-$message .= "--".$boundary."\r\n";
-$message .= "Content-Type: application/octet-stream; name=\"".$filename."\"\r\n";
-$message .= "Content-Transfer-Encoding: base64\r\n";
-$message .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";
-$message .= $attachment."\r\n";
-$message .= "--".$boundary."--";
-
-// send email
-if (mail($to, $subject, $message, $headers)) {
-    echo "Email with attachment sent successfully.";
-} else {
-    echo "Failed to send email with attachment.";
-}
+       // redirect afterwords, if needed
+       header('Location: work.html');
 ?>
