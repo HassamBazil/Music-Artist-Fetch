@@ -1,27 +1,613 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Assignment - Hassam Bazil</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title>EpicSecure </title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="icon" href="assets/imgs/es.png">
+    <!-- Bootstrap + LeadMark main styles -->
+    <link rel="stylesheet" href="assets/css/leadmark.css">
+    <script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js'></script>
+<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
+<script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<style>
+    html {
+  scroll-padding-top: 6rem;
+}
+  </style>
 </head>
 
-<body>
-    <div style="color:white; text-align: center;"> 
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/es.png" alt="" style="width:150px;">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="ml-4 nav-link btn btn-primary btn-sm rounded"
+                            style="color:white!important">Work with us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h1 class="subtitle">Security Solutions</h1>
+            <h1 class="title">We <span style="color:rgb(176, 40, 40)">help</span> you <span
+                    style="color:#293182">secure</span> </h1>
+        </div>
+        <div class="shape">
+            <svg viewBox="0 0 1500 200">
+                <path
+                    d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z" />
+            </svg>
+        </div>
+        <div class="mouse-icon">
+            <div class="wheel"></div>
+        </div>
+    </header>
+    <!-- End Of Page Header -->
+
+
+    <section>
+        <div id="background">
+
+        </div>
+    </section>
+    <!-- Service Section -->
+    <section id="service" class="section pt-0">
+        <div class="container">
+            <h6 class="section-title text-center pt-5" >Our Services</h6>
+            <h6 class="section-subtitle text-center mb-5 pb-3">We help you articulate your needs and provide you
+                resources for a specific security solution you need. </h6>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182"> Identity & Access Management <span
+                                    style="color:red">(IAM) </span>
+                                <img src="assets/imgs/iam.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">
+                                        EpicSecure provides you a complete range of end-to-end identity administration making you immune to security threats.
+                                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182">
+                                Privileged Access Management <span style="color:red">(PAM) </span>
+                                <img src="assets/imgs/pam.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">We make sure you get to secure, control, manage and monitor privileged access to your critical assets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182">
+                                Customer Identity Management <span style="color:red">(CIM)</span><img
+                                    src="assets/imgs/ciam.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">Govern how customers access your website, how their data is managed and utilized.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End OF Service Section -->
+
+   
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
+                    <h6 class="section-title mb-0">About <span style="color:#293182">EpicSecure</span> </h6>
+                    <h6 class="section-subtitle mb-4" style="color: rgb(220, 39, 39)">Let us help you secure</h6>
+                    <p>
+
+                        EPICSecure is an integration firm specializing in IAM Information Security Consulting, managed services, and implementation services. Based in Ontario Canada, we provide professional services and guidance to clients across North America. Our organization, from the leadership to our consultants, all have extensive experience with providing secure solutions and providing hands on integration for many large clients. </p>
+                    <img src="assets/imgs/about.jpg" alt="" class="w-100 mt-3 shadow-sm">
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="assets/imgs/about-1.jpg" alt="" class="w-100 shadow-sm">
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/imgs/about-2.jpg" alt="" class="w-100 shadow-sm">
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p>EPICSecure has become a leader in designing and implementing IAM solutions that are at the leading edge of helping enterprises protect their most critical assets. <br/> <br/> We specialize in:
+                              <br/> <br/> <b> - Identity & Access Management</b>
+                              <br/> <b> - PIM/PAM Solutions (CyberArk, Lieberman, TPAM, Hitachi ID)</b> 
+                              <br/><b> - Two Factor Authentication</b>
+                              <br/><b> - Program/Project Management</b>
+                              <br/> <b> - Certification/Attestation </b></p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End OF About Section -->
+
+    <section class="section-background parallax">
+        <div style="background-color: rgba(0, 0, 0, 0.5); margin: 80px; padding:8px; font-style: italic;" ><h3>"As we’ve come to realize, the idea that security starts and ends with the purchase of a prepackaged firewall is simply misguided."</h3></div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <h6 class="section-title text-center">How can we help?</h6>
+            <h6 class="section-subtitle mb-5 text-center">With the help of certified professionals, we help you manage
+                IAM, PAM and CIM. </h6>
+            <div class="filters">
+                <a href="#" data-filter=".new" class="active">
+                    <img src="assets/imgs/iam.png" alt="" style="height: 30px; margin-right: -6px;">
+                    IAM
+                </a>
+                <a href="#" data-filter=".branding">
+                    <img src="assets/imgs/pam.png" alt="" style="height: 30px;">
+                    PAM
+                </a>
+                <a href="#" data-filter=".web">
+                    <img src="assets/imgs/ciam.png" alt="" style="height: 30px;">
+                    CIM
+                </a>
+            </div>
+            <div class="portfolio-container">
+                <div class="new">
+                    <div >
+                        <h6>Identity and Access Management</h6>
+                        <p>
     
-        <h1 style="margin-top: 10px"> Test Mailer </h1>
-        <p> New York </p> 
-        <p> Pennsylvania  </p> 
-        <p> New York </p> 
-        <p> Buffalo </p>
-         
-    
-    
-    </div>
+                            EpicSecure specializes in Identity and Access Management (IAM), which is our flagship service. Unlike other cybersecurity firms that offer a wide range of services, we dedicate all our resources to IAM. What sets EpicSecure apart is our exceptional team and expertise. Our engineers and consultants are highly skilled and specialized in IAM, specifically in Privileged Access Management (PAM) and Customer Identity and Access Management (CIAM). With a proven track record, we offer comprehensive IAM solutions, starting from gathering requirements and developing roadmaps to complete implementation, training, and managed support services. 
+                        </p>
+                    </div>
+                   
+                </div>
+
+                <div class="branding">
+                    <h6>Privileged Access Management</h6>
+                    <p>
+                        Privileged Access Management (PAM) encompasses a set of governance, processes, and technological controls that effectively manage elevated or privileged permissions within an IT environment. It grants authorized users the necessary access to privileged information, enabling them to execute privileged commands while maintaining control over user access permissions by providing the minimum privileges required to fulfill their job responsibilities. To better understand PAM, envision an office space with restricted areas, such as a server room, accessible only to a limited number of employees. The organization regulates access to these restricted areas using a pass card or similar mechanisms. Similarly, enterprise PAM solutions operate on a comparable principle. In this scenario, privileged users represent the employees, privileged credentials act as the pass card, and the systems and assets form the restricted areas that need controlled access.</p>
+                </div>
+
+                <div class="web">
+                    <h6>Customer Identity Management</h6>
+                    <p>
+
+                       
+In today's dynamic digital landscape, customers have become increasingly sophisticated, demanding exceptional customer experiences during their online interactions with brands. As the value and sensitivity of digital transactions rise, organizations must prioritize safeguarding their consumer-facing channels, especially in heavily regulated sectors like financial services and pharmaceuticals.
+<br>
+At EpicSecure, we adopt a disciplined and risk-based approach to align our clients' Customer Identity and Access Management (CIAM) programs with their business objectives. Our holistic perspective encompasses governance, people, processes, and technology, enabling effective management of user identities across the organization. We prioritize the principles of Least Privilege and Need-to-Know, ensuring that users possess only the essential rights and permissions required for their tasks. By doing so, we enhance security and minimize potential risks.
+
+                    </p>
+
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    <section id="service" class="section pt-0  ">
+        <div class="container">
+            <h6 class="section-title text-center pt-5" >Our PAM program overview</h6>
+            <h6 class="section-subtitle text-center mb-5 pb-3">We help you articulate your needs and provide you
+                resources for a specific security solution you need. </h6>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182"> Gathering Requirements 
+                                <img src="assets/imgs/requirments.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">
+                                        Review of privileged access management processes, identifying opportunities for improvement in accordance with best practices.  </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182">
+                                Solution Architecture
+                                <img src="assets/imgs/solution.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">Solution design & planning services. Infrastructure planning, hardware & sizing requirements & diagrams. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182">
+                                Configuration <img
+                                    src="assets/imgs/rollout.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">Expert technical assistance in installation & configuration of privileged access management solution.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182"> Quality Assurance 
+                                <img src="assets/imgs/assurance.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">
+                                        Deep dive diagnostic review of existing PAM solution deployments, with recommendations for improvements.   </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182">
+                                SOPs Documentation
+                                <img src="assets/imgs/document.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">Detailed documentation for the program inclusive of SOP guides and material.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h5 class="card-title mt-3" style="color:#293182">
+                                End User Training<img
+                                    src="assets/imgs/management.png" alt=""
+                                    style="height: 40px; float:right; margin-top: -20px;">
+                                <h5>
+                                    <p class="mb-0">Organizational change management activities with end user teams and end user trainings via live sessions and documentation.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- <section id="articles" class="section pt-0">
+        <div class="container">
+            <h6 class="section-title text-center pt-5" >Articles</h6>
+            <h6 class="section-subtitle text-center mb-5 pb-3">We help you articulate your needs and provide you
+                resources for a specific security solution you need. </h6>
+
+            <div class="row" style="text-align: center;">
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <img id="article1img" style=" width: 300px">
+                            <h5 id="article1h" class="card-title mt-3" style="color:#293182"> 
+                                <h5>
+                                    <p class="mb-0" id="article1p" style="text-align: left;">
+                                        </p>
+                                        <a class="mb-0" id="article1link" href="" target="_blank" style="color:red; float:left; padding-top: 10px;">
+                                            Full article ->
+                                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <img id="article2img" style=" width: 300px">
+                            <h5 id="article2h" class="card-title mt-3" style="color:#293182"> 
+                                <h5>
+                                    <p class="mb-0" id="article2p" style="text-align: left;">
+                                        </p>
+                                        <a class="mb-0" id="article2link" href="" target="_blank" style="color:red; float:left; padding-top: 10px;">
+                                            Full article ->
+                                        </a> </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <img id="article3img" style=" width: 300px">
+                            <h5 id="article3h" class="card-title mt-3" style="color:#293182"> 
+                                <h5>
+                                    <p class="mb-0" id="article3p" style="text-align: left;">
+                                        </p>
+                                        <a class="mb-0" id="article3link" href="" target="_blank" style="color:red; float:left; padding-top: 10px;">
+                                            Full article ->
+                                        </a> </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="partners col-sm-12">
+        <div class="container text-center" style="padding: 40px;color: black; font-weight: 600;" >
+            
+            <div class="row" >
+               
+                
+<div class="col-lg-5 col-sm-12" >
+    <h3 style="font-size: 42px; ">Our Partners</h3>
+    <p style="text-align: left; padding-top: 20px;">
+        At EpicSecure, we believe in collaborative efforts to combat cybercrime and secure the digital landscape. We are proud to work hand-in-hand with an esteemed network of strategic partners who share our commitment to protecting businesses and individuals from ever-evolving cyber threats. <br><br>
+        Through our partnerships, we leverage the collective expertise, cutting-edge technologies, and diverse perspectives to provide comprehensive cybercrime solutions that ensure the highest level of security and resilience for our clients. <br><br>
+        Together, we combine our strengths to stay ahead of emerging threats, share intelligence, and develop proactive strategies to defend against cyber attacks. By fostering strong relationships with our partners, we create a robust ecosystem that empowers us to provide our clients with the most effective and reliable cybercrime solutions available.
+    </p>
+</div>
+
+<div class="col-lg-7 col-sm-12" style="">
+    <img src="assets/imgs/logoss.png" style="height:auto; width: 100%;">
+</div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </section> -->
+    <!-- End of portfolio section -->
+
+    <!-- Blog Section -->
+    <!-- <section class="section" id="blog">
+        <div class="container">
+            <h6 class="section-title mb-0 text-center">Latest Articles</h6>
+            <h6 class="section-subtitle mb-5 text-center"></h6>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="assets/imgs/image1.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h6 class="card-title">10 Must-Read Ransomware </h6>
+                            <p>description description description description description description description
+                                description </p>
+                            <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="assets/imgs/computer-g5b0d13325_1280.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h6 class="card-title"> What is Cybersecurity? Everything You Need to Know</h5>
+                                <p>description description description description </p>
+                                <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
+                            <h6 class="card-title">Understanding the Importance of IAM (Identity and Access Management)
+                            </h6>
+                            <p>description description description </p>
+                            <a href="javascript:void(0)" class="small text-muted">Go To The Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End of Blog Section -->
+
+   
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="mb-4">+ 123-456-7890</p>
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">112 Barrett Drive, Red Deer, Alberta, Canada</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">Admin@epicsecureinc.com</p>
+                    <p></p>
+                </div>
+                <div class="col-md-7">
+                    <form>
+                        <h4 class="mb-4">Drop Us A Line</h4>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control rounded-0 bg-transparent" name="name"
+                                    placeholder="Name">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="email" class="form-control rounded-0 bg-transparent"
+                                    name="Email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control rounded-0 bg-transparent"
+                                    name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group col-12">
+                                <textarea name="message" id="" cols="30" rows="4"
+                                    class="form-control rounded-0 bg-transparent"
+                                    placeholder="Message"></textarea>
+
+                            </div>
+                            <div class="form-group col-12 mb-0">
+                                <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy;
+                    <script>document.write(new Date().getFullYear())</script>, EpicSecure. All rights reserved
+                </p>
+            </footer>
+            <!-- End of Page Footer -->
+        </div>
+    </section>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js">
+
+
+    </script>
+    <!-- LeadMark js -->
+    <script src="assets/js/leadmark.js">
+
+
+
+
+logJSONData();
+        var renderer	= new THREE.WebGLRenderer({
+		antialias	: true
+	});
+/* Fullscreen */
+	renderer.setSize( window.innerWidth, window.innerHeight );
+/* Append to HTML */
+	document.getElementById("background").appendChild( renderer.domElement );
+	var onRenderFcts= [];
+	var scene	= new THREE.Scene();
+	var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
+/* Play around with camera positioning */
+	camera.position.z = 15; 
+  camera.position.y = 2;
+/* Fog provides depth to the landscape*/
+  scene.fog = new THREE.Fog(0x000, 0, 45);
+	;(function(){
+		var light	= new THREE.AmbientLight( 0x202020 )
+		scene.add( light )
+		var light	= new THREE.DirectionalLight('white', 5)
+		light.position.set(0.5, 0.0, 2)
+		scene.add( light )
+		var light	= new THREE.DirectionalLight('white', 0.75*2)
+		light.position.set(-0.5, -0.5, -2)
+		scene.add( light )		
+	})()
+	var heightMap	= THREEx.Terrain.allocateHeightMap(256,256)
+	THREEx.Terrain.simplexHeightMap(heightMap)	
+	var geometry	= THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
+	THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
+/* Wireframe built-in color is white, no need to change that */
+	var material	= new THREE.MeshBasicMaterial({
+		wireframe: true
+	});
+	var mesh	= new THREE.Mesh( geometry, material );
+	scene.add( mesh );
+	mesh.lookAt(new THREE.Vector3(0,1,0));
+/* Play around with the scaling */
+	mesh.scale.y	= 3.5;
+	mesh.scale.x	= 3;
+	mesh.scale.z	= 0.20;
+	mesh.scale.multiplyScalar(10);
+/* Play around with the camera */
+	onRenderFcts.push(function(delta, now){
+		mesh.rotation.z += 0.2 * delta;	
+	})
+	onRenderFcts.push(function(){
+		renderer.render( scene, camera );		
+	})
+	var lastTimeMsec= null
+	requestAnimationFrame(function animate(nowMsec){
+		requestAnimationFrame( animate );
+		lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
+		var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
+		lastTimeMsec	= nowMsec
+		onRenderFcts.forEach(function(onRenderFct){
+			onRenderFct(deltaMsec/1000, nowMsec/1000)
+		})
+	})
+    $(function(){
+        $("#input-id").on('change', function(event) {
+            var file = event.target.files[0];
+            if(file.size>=2*1024*1024) {
+                alert("JPG images of maximum 2MB");
+                $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                return;
+            }
+
+            if(!file.type.match('image/jp.*')) {
+                alert("only JPG images");
+                $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                return;
+            }
+
+            var fileReader = new FileReader();
+            fileReader.onload = function(e) {
+                var int32View = new Uint8Array(e.target.result);
+                //verify the magic number
+                // for JPG is 0xFF 0xD8 0xFF 0xE0 (see https://en.wikipedia.org/wiki/List_of_file_signatures)
+                if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0) {
+                    alert("ok!");
+                } else {
+                    alert("only valid JPG images");
+                    $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                    return;
+                }
+            };
+            fileReader.readAsArrayBuffer(file);
+        });
+    });
+    </script>
+
 </body>
 
 </html>

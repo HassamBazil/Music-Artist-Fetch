@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title>EpicSecure - Work </title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="icon" href="assets/imgs/es.png">
+    <!-- Bootstrap + LeadMark main styles -->
+    <link rel="stylesheet" href="assets/css/leadmark.css">
+    <script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/build/three-min.js'></script>
+<script src='https://jeromeetienne.github.io/threex.terrain/examples/vendor/three.js/examples/js/SimplexNoise.js'></script>
+<script src='https://jeromeetienne.github.io/threex.terrain/threex.terrain.js'></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<style>
+    html {
+  scroll-padding-top: 6rem;
+}
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light " data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/imgs/es.png" alt="" style="width:150px;">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service" style="color:black">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" style="color:black">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" style="color:black">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="ml-4 nav-link btn btn-primary btn-sm rounded"
+                            style="color:white!important">Work with us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <section id="portfolios" class="section portfolios-section">
+        <div class="container">
+            
+            <div class="filters" style="text-align-last: center!important;">
+                <a href="#" data-filter=".new" class="active">
+                   Looking for work?
+                </a>
+                <a href="#" data-filter=".brandings">
+                 Looking for a resource? 
+                </a>
+                
+            </div>
+            <div class="portfolio-container">
+                <div class="new">
+                    
+                    <div class="row">
+                       <div class="col-4" style="background-color: #293182; color:white; padding: 20px;">
+                        <h2 style="color: white;">Why work for us?</h2>
+                            <p style="color: white;">
+                                Working with us as a cybersecurity specialist would be an exceptional opportunity for you to harness your skills and expertise in an environment that fosters innovation, collaboration, and cutting-edge technologies. Our organization is committed to protecting critical assets and staying at the forefront of cybersecurity advancements, making it an ideal platform for you to make a significant impact and thrive professionally. Together, we can reinforce the digital defenses of countless organizations and make a lasting difference in the world of cybersecurity.
+
+                            </p>
+                       </div>
+                       <div class="col-8">
+                          <div class="form-row">
+                             <div class="form-group col-sm-6">
+                                 <input type="text" class="form-control  rounded-0 bg-transparent" name="fname"
+                                     placeholder="First Name">
+                             </div>
+                             <div class="form-group col-sm-6">
+                                 <input type="text" class="form-control  rounded-0 bg-transparent" name=";name"
+                                     placeholder="Last Name">
+                             </div>
+                             <div class="form-group col-sm-6">
+                                 <input type="email" class="form-control  rounded-0 bg-transparent"
+                                     name="Email" placeholder="Email">
+                             </div>
+                             <div class="form-group col-sm-6">
+                                <input type="phone" class="form-control  rounded-0 bg-transparent"
+                                    name="phone" placeholder="Phone Number">
+                            </div>
+                            
+                             <div class="form-group col-12">
+                                 <textarea name="coverletter" id="" cols="20" rows="4"
+                                     class="form-control  rounded-0 bg-transparent"
+                                     placeholder="Write a Cover Letter"></textarea>               
+                             </div>
+                             <div class="form-group col-12">
+                                 <p>Upload your CV</p>
+                                 <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" />
+                             </div>
+                             
+                 
+                             <div class="form-group col-12 mb-0">
+                                 <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
+                             </div>
+                         </div>
+                       </div>
+                       
+                    </div>
+                   
+                </div>
+    
+                <div class="brandings">
+                    
+                    
+                        <div class="row">
+                           <div class="col-4 " style="background-color: rgb(176, 40, 40); color: white; padding:20px">
+                            <h2 >Why work with us?</h2>
+                            <p>
+                                Choosing us as your trusted cybersecurity partner would grant you peace of mind and an unparalleled level of protection for your digital assets. Our team of highly skilled cybersecurity specialists is dedicated to understanding and addressing your unique challenges, ensuring that your organization stays resilient against evolving cyber threats. We prioritize a proactive approach, employing state-of-the-art technologies and industry best practices to safeguard your sensitive data and maintain the integrity of your systems.
+                            </p>
+                           </div>
+                           <div class="col-8 ">
+                            <form action="sendmail.php" method="post" enctype="multipart/form-data">
+                              <div class="form-row">
+                                 <div class="form-group col-sm-6">
+                                     <input type="text" class="form-control  rounded-0 bg-transparent" name="fname"
+                                         placeholder="First Name">
+                                 </div>
+                                 <div class="form-group col-sm-6">
+                                     <input type="text" class="form-control  rounded-0 bg-transparent" name=";name"
+                                         placeholder="Last Name">
+                                 </div>
+                                 <div class="form-group col-sm-6">
+                                     <input type="email" class="form-control  rounded-0 bg-transparent"
+                                         name="Email" placeholder="Email">
+                                 </div>
+                                 <div class="form-group col-sm-6">
+                                    <input type="phone" class="form-control  rounded-0 bg-transparent"
+                                        name="phone" placeholder="Phone Number">
+                                </div>
+                                
+                                 <div class="form-group col-12">
+                                     <textarea name="coverletter" id="" cols="20" rows="4"
+                                         class="form-control  rounded-0 bg-transparent"
+                                         placeholder="Describe what you are looking for?"></textarea>               
+                                 </div>
+                                 
+                     
+                                 <div class="form-group col-12 mb-0" >
+                                     <button type="submit" class="btn btn-primary rounded w-md mt-3" style="background-color:rgb(176, 40, 40)">Send</button>
+                                 </div>
+                             </div>
+                            </form>
+                           </div>
+                           
+                        </div>
+                       
+                   
+                   </div>
+    
+              
+            </div>
+        </div>
+    </section>
+   
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="mb-4">+ 123-456-7890</p>
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">Canada</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">admin@epicsecureinc.com</p>
+                    <p></p>
+                </div>
+                <div class="col-md-7">
+                    <form action="sendmail.php" method="post" enctype="multipart/form-data">
+                        <h4 class="mb-4">Drop Us A Line</h4>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control rounded-0 bg-transparent" name="name"
+                                    placeholder="Name">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="email" class="form-control rounded-0 bg-transparent"
+                                    name="Email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control rounded-0 bg-transparent"
+                                    name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group col-12">
+                                <textarea name="message" id="" cols="30" rows="4"
+                                    class="form-control rounded-0 bg-transparent"
+                                    placeholder="Message"></textarea>
+
+                            </div>
+                            <div class="form-group col-12 mb-0">
+                                <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy;
+                    <script>document.write(new Date().getFullYear())</script>, EpicSecure. All rights reserved
+                </p>
+            </footer>
+            <!-- End of Page Footer -->
+        </div>
+    </section>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js">
+
+
+    </script>
+    <!-- LeadMark js -->
+    <script src="assets/js/leadmark.js">
+
+
+
+
+logJSONData();
+        var renderer	= new THREE.WebGLRenderer({
+		antialias	: true
+	});
+/* Fullscreen */
+	renderer.setSize( window.innerWidth, window.innerHeight );
+/* Append to HTML */
+	document.getElementById("background").appendChild( renderer.domElement );
+	var onRenderFcts= [];
+	var scene	= new THREE.Scene();
+	var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
+/* Play around with camera positioning */
+	camera.position.z = 15; 
+  camera.position.y = 2;
+/* Fog provides depth to the landscape*/
+  scene.fog = new THREE.Fog(0x000, 0, 45);
+	;(function(){
+		var light	= new THREE.AmbientLight( 0x202020 )
+		scene.add( light )
+		var light	= new THREE.DirectionalLight('white', 5)
+		light.position.set(0.5, 0.0, 2)
+		scene.add( light )
+		var light	= new THREE.DirectionalLight('white', 0.75*2)
+		light.position.set(-0.5, -0.5, -2)
+		scene.add( light )		
+	})()
+	var heightMap	= THREEx.Terrain.allocateHeightMap(256,256)
+	THREEx.Terrain.simplexHeightMap(heightMap)	
+	var geometry	= THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
+	THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
+/* Wireframe built-in color is white, no need to change that */
+	var material	= new THREE.MeshBasicMaterial({
+		wireframe: true
+	});
+	var mesh	= new THREE.Mesh( geometry, material );
+	scene.add( mesh );
+	mesh.lookAt(new THREE.Vector3(0,1,0));
+/* Play around with the scaling */
+	mesh.scale.y	= 3.5;
+	mesh.scale.x	= 3;
+	mesh.scale.z	= 0.20;
+	mesh.scale.multiplyScalar(10);
+/* Play around with the camera */
+	onRenderFcts.push(function(delta, now){
+		mesh.rotation.z += 0.2 * delta;	
+	})
+	onRenderFcts.push(function(){
+		renderer.render( scene, camera );		
+	})
+	var lastTimeMsec= null
+	requestAnimationFrame(function animate(nowMsec){
+		requestAnimationFrame( animate );
+		lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
+		var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
+		lastTimeMsec	= nowMsec
+		onRenderFcts.forEach(function(onRenderFct){
+			onRenderFct(deltaMsec/1000, nowMsec/1000)
+		})
+	})
+    $(function(){
+        $("#input-id").on('change', function(event) {
+            var file = event.target.files[0];
+            if(file.size>=2*1024*1024) {
+                alert("JPG images of maximum 2MB");
+                $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                return;
+            }
+
+            if(!file.type.match('image/jp.*')) {
+                alert("only JPG images");
+                $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                return;
+            }
+
+            var fileReader = new FileReader();
+            fileReader.onload = function(e) {
+                var int32View = new Uint8Array(e.target.result);
+                //verify the magic number
+                // for JPG is 0xFF 0xD8 0xFF 0xE0 (see https://en.wikipedia.org/wiki/List_of_file_signatures)
+                if(int32View.length>4 && int32View[0]==0xFF && int32View[1]==0xD8 && int32View[2]==0xFF && int32View[3]==0xE0) {
+                    alert("ok!");
+                } else {
+                    alert("only valid JPG images");
+                    $("#form-id").get(0).reset(); //the tricky part is to "empty" the input file here I reset the form.
+                    return;
+                }
+            };
+            fileReader.readAsArrayBuffer(file);
+        });
+    });
+    </script>
+
+</body>
+
+</html>
