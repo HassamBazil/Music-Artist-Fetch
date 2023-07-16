@@ -82,38 +82,35 @@
                             </p>
                        </div>
                        <div class="col-8">
+			       <form action="sendmail.php" method="post" enctype="multipart/form-data">
                           <div class="form-row">
                              <div class="form-group col-sm-6">
-                                 <input type="text" class="form-control  rounded-0 bg-transparent" name="fname"
+                                 <input type="text" class="form-control  rounded-0 bg-transparent" name="from"
                                      placeholder="First Name">
                              </div>
-                             <div class="form-group col-sm-6">
-                                 <input type="text" class="form-control  rounded-0 bg-transparent" name=";name"
-                                     placeholder="Last Name">
-                             </div>
-                             <div class="form-group col-sm-6">
-                                 <input type="email" class="form-control  rounded-0 bg-transparent"
-                                     name="Email" placeholder="Email">
-                             </div>
-                             <div class="form-group col-sm-6">
-                                <input type="phone" class="form-control  rounded-0 bg-transparent"
-                                    name="phone" placeholder="Phone Number">
-                            </div>
+                             
+                            
                             
                              <div class="form-group col-12">
-                                 <textarea name="coverletter" id="" cols="20" rows="4"
+                                 <textarea name="subject" id="" cols="20" rows="4"
+                                     class="form-control  rounded-0 bg-transparent"
+                                     placeholder="Write a Cover Letter"></textarea>               
+                             </div>
+				  <div class="form-group col-12">
+                                 <textarea name="message" id="" cols="20" rows="4"
                                      class="form-control  rounded-0 bg-transparent"
                                      placeholder="Write a Cover Letter"></textarea>               
                              </div>
                              <div class="form-group col-12">
                                  <p>Upload your CV</p>
-                                 <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" />
+                                 <input type="file" name="attachment" accept="application/pdf,application/vnd.ms-excel" />
                              </div>
                              
                  
                              <div class="form-group col-12 mb-0">
                                  <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
                              </div>
+				  </form>
                          </div>
                        </div>
                        
